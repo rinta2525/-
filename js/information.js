@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (!infoContainer) return;
 
   try {
-    const res = await fetch('/data/information.json');
+    const res = await fetch('./data/information.json');
     const data = await res.json();
 
     // 日付で降順ソート
@@ -50,3 +50,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     infoContainer.innerHTML = '<li>お知らせを読み込めませんでした。</li>';
   }
 });
+
